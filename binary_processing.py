@@ -6,12 +6,11 @@ def cvt_to_binary(img,binary_threshold):
     img2 = np.where(img1 < binary_threshold,0,img1)
     return img2
 
-binary_threshold = int(input('Input Binary Threshold : '))
-img = cv2.imread(f'./img_sample/img0.jpg',0)
-binary_img = cvt_to_binary(img,binary_threshold)
+img = cv2.imread('./img_sample/img0.jpg',0)
+binary_img = cvt_to_binary(img,100)
 print(binary_img)
 
-cv2.imwrite(f'./processed_img/img0_binary.jpg',binary_img)
+cv2.imwrite('./processed_img/img0_binary.jpg',binary_img)
 cv2.imshow('origin_img', binary_img)
 cv2.waitKey(0)
 

@@ -11,7 +11,7 @@ def histogram(img):#use counting sort
     return cnt
 
 img = cv2.imread('./img_sample/img0.jpg',0)
-print(img)
+#print(img)
 img_hist = histogram(img)
 x = np.arange(256)
 y = img_hist
