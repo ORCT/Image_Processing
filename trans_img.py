@@ -6,7 +6,6 @@ def trans(img,dx,dy):
     scale_img = np.zeros([h+dy,w+dx],dtype=np.uint8)
     for i in range(h):
         for j in range(w):
-            #print(scale_img[i*y_scale][j*x_scale], img[i][j])
             scale_img[i+dy][j+dx] = img[i][j]
     return scale_img
 

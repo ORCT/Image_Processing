@@ -11,10 +11,10 @@ def cvt_to_gray(img):
         return img
     
 img_name = input('Input Image Name : ')
-img = cv2.imread(f'./img_sample/{img_name}.jpg')
+img = cv2.imread('./img_sample/img0.jpg')
 gray_img = cvt_to_gray(img)
 
-cv2.imwrite(f'./processed_img/{img_name}_gray.jpg', gray_img)
+cv2.imwrite('./processed_img/img0_gray.jpg', gray_img)
 cv2.imshow('gray_img', gray_img)
 cv2.waitKey(0)
 
